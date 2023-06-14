@@ -13,7 +13,10 @@ function NewsletterRegistration() {
 
     fetch('/api/newsletter', {
       method: 'POST',
-      body: JSON.stringify({email: enteredEmail})
+      body: JSON.stringify({email: enteredEmail}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     });
   }
 
