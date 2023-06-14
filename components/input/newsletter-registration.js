@@ -1,10 +1,18 @@
 import classes from './newsletter-registration.module.css';
+import { useRef } from 'react';
 
 function NewsletterRegistration() {
+
+
+  const emailInputRef = useRef();
+
   function registrationHandler(event) {
     event.preventDefault();
 
-    fetch('/api/newsletter');
+    fetch('/api/newsletter', {
+      method: 'POST',
+      body:
+    });
   }
 
   return (
