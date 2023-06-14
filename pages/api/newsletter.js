@@ -1,4 +1,4 @@
-function handler() {
+function handler(req, res) {
 
 }
 
