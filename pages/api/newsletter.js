@@ -7,7 +7,7 @@ function handler(req, res) {
             return;
         }
 
-        
+        console.log(userEmail);
     }
 }
 
