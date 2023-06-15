@@ -1,9 +1,8 @@
-import classes from './newsletter-registration.module.css';
 import { useRef } from 'react';
 
+import classes from './newsletter-registration.module.css';
+
 function NewsletterRegistration() {
-
-
   const emailInputRef = useRef();
 
   function registrationHandler(event) {
@@ -13,12 +12,13 @@ function NewsletterRegistration() {
 
     fetch('/api/newsletter', {
       method: 'POST',
-      body: JSON.stringify({email: enteredEmail}),
+      body: JSON.stringify({ email: enteredEmail }),
       headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(response => response.json())
-    .then(data => console.log(data));
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
   }
 
   return (
